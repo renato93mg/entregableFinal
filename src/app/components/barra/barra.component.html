@@ -1,0 +1,27 @@
+<p>
+    <mat-toolbar color="primary">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" type="button"
+            mat-button (click)="drawer.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>Primer Entregable Proyecto Final</span>
+        <span class="example-spacer"></span>
+    </mat-toolbar>
+</p>
+
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <mat-list>
+            <mat-list-item>
+                <a routerLink="/listado">Listado de alumnos</a>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <a routerLink="/formulario">Registro de alumnos</a>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+        </mat-list>
+    </mat-drawer>
+    <router-outlet></router-outlet>
+</mat-drawer-container>
+
